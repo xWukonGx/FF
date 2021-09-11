@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  font-family: Ciro;
+  user-select: none;
+}
+body {
+  background-image: url("../imaages/2.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: hidden;
+  background-position: center;
+}
+navbar ul {
+  list-style-type: none;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 0;
+  background: #222;
+  overflow-x: hidden;
+}
+navbar ul li {
+  display: inline;
+  float: left;
+}
+navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+  display: block;
+}
+.main {
+  height: 100vh;
+
+  z-index: -1;
+  padding-top: 12%;
+}
+.main p#desc {
+  text-align: center;
+  color: white;
+  margin: auto;
+  text-shadow: black 2px 3px;
+  display: block;
+  margin-bottom: 3%;
+}
+.main p#sk {
+  text-align: center;
+  color: white;
+  text-shadow: black 2px 3px;
+  border-bottom: 1px solid white;
+  margin: auto;
+  font-size: 7vw;
+  width: fit-content;
+  letter-spacing: 5px;
+  margin-bottom: 1%;
+  margin-top: auto;
+}
+.main button#skss {
+  background-color: rgba(0, 0, 0, 0.219);
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  width: 15%;
+  margin: auto;
+  padding: 18px;
+}
+.main button:hover {
+  color: rgb(255, 140, 0);
+  border-color: darkorange;
+  transition: ease 0.9s;
+}
+navbar ul li a:hover {
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.9s;
+  color: darkorange;
+}
+
+/*=============*/
+
+.main .pop {
+  width: 100%;
+  left: 0;
+  position: fixed;
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+vl {
+  height: 70vh;
+  border-left: white 2px solid;
+}
+.main .pop .pop-content {
+  max-width: 92%;
+  height: 80vh;
+  background-color: rgb(28, 29, 41);
+  margin-top: 6%;
+
+  box-shadow: white 0px 0.4px;
+}
+.info {
+  padding: auto;
+  width: 100%;
+}
+
+.pop-content .login {
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+  float: left;
+}
+
+.pop-content .register {
+  width: 50%;
+  height: 50vh;
+  float: right;
+  margin: auto;
+
+  border-left: 1px solid white;
+}
+
+.pop-content input {
+  width: 50%;
+  margin: 0.35%;
+  height: 40px;
+  background-color: transparent;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  color: white;
+  font-family: Verdana;
+  font-size: 16px;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+#kis {
+  width: 100%;
+  height: 30px;
+}
+.pop-content input:focus {
+  transition: ease-out 0.4s 0.1s;
+  width: 60%;
+}
+.pop-content input#submit {
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-top: 20.2%;
+}
+.pop-content input#submit1 {
+  border: 1px solid white;
+  margin-top: 13.5%;
+  border-radius: 25px;
+}
+.pop-content input#submit:hover,
+.pop-content input#submit1:hover {
+  border-color: red;
+}
+
+.pop-content h1 {
+  color: white;
+  font-family: "Ink Free", "Ciro", "Mv Boli";
+}
+.pop-content button#close {
+  width: 4%;
+  height: 8%;
+  float: right;
+  position: relative;
+  color: white;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+.pop-content button#close:hover {
+  background-color: red;
+}
+
+/*=============*/
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@font-face {
+  font-family: Ciro;
+  src: url("../fonts/Cairo-Black.ttf");
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-top: 30%;
+  }
+  body {
+    background-image: url("../imaages/1071826.jpg");
+  }
+  .main button#skss {
+    background-color: rgba(0, 0, 0, 0.219);
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    width: 40%;
+    margin: auto;
+    padding: 18px;
+  }
+  .main p#desc {
+    margin-bottom: 5%;
+  }
+  .main p#sk {
+    font-size: 12vw;
+  }
+  #sjs {
+    display: none;
+  }
+  .frame {
+    padding-top: 9%;
+  }
+}

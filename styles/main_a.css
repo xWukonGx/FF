@@ -1,0 +1,729 @@
+* {
+  box-sizing: border-box;
+  font-family: Cairo;
+  user-select: none;
+}
+body {
+  background-color: #222;
+}
+navbar ul {
+  list-style-type: none;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.123) 2px 2px;
+  padding: 0;
+  background: #222;
+  overflow-x: hidden;
+}
+navbar ul li {
+  display: inline;
+  float: left;
+}
+navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+}
+
+navbar ul li a:hover {
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.9s;
+  color: darkorange;
+}
+/*====================*/
+
+@keyframes animates {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.user_cont {
+  width: 20%;
+  height: 85vh;
+  float: left;
+  margin-top: 5%;
+  border-radius: 25px;
+  border: 1px solid darkorange;
+}
+.user_cont img {
+  border-radius: 50%;
+  border: 0.8px solid darkorange;
+  width: 14vw;
+  display: block;
+  height: 14vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+.user_cont p#username {
+  font-family: Cairo;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+
+  color: white;
+}
+.user_cont p#statics {
+  font-family: Cairo;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+
+  color: white;
+}
+b {
+  color: darkorange;
+}
+
+#user_con {
+  width: 100%;
+  margin-top: 5%;
+  font-family: Cairo;
+  border: 1px solid darkorange;
+  border-radius: 25px;
+  padding: 5%;
+  height: auto;
+  color: white;
+}
+.container {
+  position: relative;
+  width: fit-content;
+
+  border-radius: 50%;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Make the image responsive */
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgba(85, 85, 85, 0.164);
+  color: white;
+  font-size: 8px;
+  padding: 8px 0px;
+  display: none;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: rgba(0, 0, 0, 0.288);
+}
+#user_con img {
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid darkorange;
+  display: block;
+  height: 25vw;
+}
+img#GA:hover .btn {
+  display: block;
+}
+#user_con p#username {
+  font-family: Cairo;
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+}
+#user_con p#statics {
+  font-family: Cairo;
+  font-size: 19px;
+  text-align: center;
+}
+#user_con #succes {
+  color: white;
+  text-align: center;
+  font-family: Cairo;
+  background-color: rgb(0, 255, 0);
+}
+#user_con #fail {
+  color: white;
+  text-align: center;
+  font-family: Cairo;
+  background-color: rgb(255, 0, 0);
+}
+.oky {
+  width: 100%;
+  margin: 0 auto;
+}
+.oky input {
+  background-color: transparent;
+  color: #222;
+  margin-left: 11%;
+}
+.oky input#s {
+  color: white;
+  font-family: Cairo;
+  border: none;
+  text-decoration: underline;
+  margin-right: 11%;
+  text-align: center;
+}
+
+/*=============*/
+
+/*=============*/
+
+.accounts_cont {
+  width: 79.5%;
+  float: right;
+  border-radius: 25px;
+  height: 85vh;
+  margin-top: 5%;
+}
+.accounts_cont iframe {
+  border: none;
+  width: 100%;
+  overflow: auto;
+  height: 100%;
+}
+
+/*============*/
+
+#se {
+  width: 79.5%;
+  float: right;
+  border-radius: 25px;
+  height: 85%;
+  padding: 2%;
+
+  height: auto;
+  display: none;
+}
+#se o#lv {
+  font-size: 24px;
+  color: white;
+  font-family: Cairo;
+  float: left;
+}
+#se form#ddos {
+}
+
+#se form#ddos #range {
+  width: 80%;
+  margin-top: 0;
+  background-color: darkorange;
+}
+#se form#ddos .io {
+  color: white;
+  width: 80%;
+  position: relative;
+  height: auto;
+  outline: none;
+  padding: 2%;
+  margin-top: 4%;
+  border: 1px solid darkorange;
+  border-radius: 25px;
+
+  font-family: Cairo;
+}
+#se form#ddos .io select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid darkorange;
+  color: white;
+  outline: none;
+  font-family: Cairo;
+  direction: rtl;
+  border-radius: 25px;
+  background-color: #222;
+}
+#se form#ddos .io select option {
+  color: darkorange;
+  font-family: Cairo;
+}
+#se form#ddos .io select option:hover {
+  background-color: darkorange;
+  color: white;
+}
+#se form#ddos .io textarea {
+  background-color: #222;
+  color: white;
+  font-family: Cairo;
+  border: 1px solid darkorange;
+  border-radius: 25px;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  max-lines: 2;
+  resize: none;
+  padding: 2%;
+  font-size: 18px;
+  outline: none;
+}
+#se form#ddos .io input[type="text"] {
+  background-color: #222;
+  width: 100%;
+
+  color: white;
+  border-radius: 25px;
+  border: 1px solid darkorange;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  outline: none;
+  direction: rtl;
+  padding: 16px 20px;
+}
+#se form#ddos .io input[type="email"] {
+  background-color: #222;
+  width: 100%;
+  direction: rtl;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid darkorange;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  outline: none;
+  padding: 16px 20px;
+}
+#se form#ddos .io input[type="submit"] {
+  background-color: #222;
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid darkorange;
+  font-size: 16px;
+  font-family: Cairo;
+  outline: none;
+  padding: 16px 20px;
+}
+#se form#ddos .io input[type="submit"]:hover {
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  transition: ease 0.3s 0.1s;
+  border: 1px solid rgb(49, 247, 0);
+  font-size: 16px;
+  font-family: Cairo;
+  outline: none;
+  padding: 16px 20px;
+}
+.pop {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.pop .pop-content {
+  width: 92%;
+  height: 80vh;
+  background-color: rgb(28, 29, 41);
+  margin-top: 6%;
+
+  box-shadow: white 0px 0.4px;
+}
+
+.pop-content input {
+  width: 50%;
+  margin: 0.35%;
+  height: 40px;
+  background-color: transparent;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  color: white;
+  font-family: Verdana;
+  font-size: 16px;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+#kis {
+  width: 100%;
+  height: 30px;
+}
+.pop-content input:focus {
+  transition: ease-out 0.4s 0.1s;
+  width: 60%;
+}
+.pop-content input#submit {
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-top: 20.2%;
+}
+.pop-content input#submit1 {
+  border: 1px solid white;
+  margin-top: 13.5%;
+  border-radius: 25px;
+}
+.pop-content input#submit:hover,
+.pop-content input#submit1:hover {
+  border-color: red;
+}
+
+.pop-content h1 {
+  color: white;
+  font-family: "Ink Free", "Ciro", "Mv Boli";
+}
+.pop-content button#close {
+  width: 4%;
+  height: 8%;
+  float: right;
+  position: relative;
+  color: white;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+.pop-content button#close:hover {
+  background-color: red;
+}
+
+/*==============*/
+
+.popA {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  display: none;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.534);
+  top: 0;
+  right: 0;
+  margin-top: 30%;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.pop .pop-contentA {
+  width: 92%;
+  height: 80vh;
+  background-color: rgb(28, 29, 41);
+  margin-top: 6%;
+  background-color: tomato;
+  margin: auto;
+  border: 1px solid white;
+  box-shadow: white 0px 0.4px;
+}
+
+#logoutt {
+  text-decoration: none;
+
+  background-color: red;
+  color: white;
+  letter-spacing: 3px;
+  padding: 14px 20%;
+  border-radius: 25px;
+  margin: auto;
+}
+#addme {
+  display: none;
+}
+
+.card {
+  width: 100%;
+  height: 50vh;
+  border-radius: 25px;
+  margin-top: 5%;
+  overflow: hidden;
+  float: left;
+  border: 1px solid darkorange;
+}
+.card img {
+  width: auto;
+  float: left;
+  height: inherit;
+}
+.card #inf {
+  float: left;
+  width: 40%;
+  margin-left: 2%;
+}
+.card #inf h1 {
+  color: white;
+}
+.card #inf p {
+  color: white;
+
+  overflow-wrap: break-word;
+}
+.card #inf p#own {
+  color: darkorange;
+}
+.card #inf #social {
+  float: left;
+}
+.fa {
+  padding: 12px;
+  font-size: 30px;
+  width: 50px;
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-phone {
+  color: white;
+  background-color: rgb(0, 255, 98);
+}
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.card:hover {
+  animation-name: sparkle;
+  animation-duration: 0.1s;
+  animation-timing-function: ease;
+}
+.card #inf a {
+  text-decoration: none;
+}
+@keyframes sparkle {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/*=============*/
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@font-face {
+  font-family: Ciro;
+  src: url("../fonts/Cairo-Regular.ttf");
+}
+@font-face {
+  font-family: Cairo;
+  src: url("../fonts/Cairo-Regular.ttf");
+}
+@media only screen and (max-width: 290px) {
+  #se form#ddos .io {
+    width: 100%;
+    margin-top: 19%;
+  }
+  ul {
+    font-size: 11px;
+    overflow: hidden;
+    height: 33px;
+  }
+  ul img {
+    width: 12px;
+    height: 26px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #logout {
+    display: none;
+  }
+  .user_cont {
+    display: none;
+  }
+  .accounts_cont {
+    width: 100%;
+    height: 100%;
+    float: none;
+  }
+  #sexo {
+    display: none;
+  }
+  #exo {
+    display: block;
+  }
+
+  #user_con {
+    width: 98%;
+    height: 100vh;
+
+    margin: 25% auto;
+  }
+  #se {
+    width: 100%;
+  }
+  #se form#ddos .io {
+    width: 100%;
+    margin-top: 5%;
+  }
+  #addme {
+    display: block;
+    box-sizing: border-box;
+    font-size: 3vw;
+    font-weight: bold;
+    background-color: #222;
+    color: white;
+    padding: 8px 16px;
+  }
+}
+@media only screen and (max-width: 1168px) {
+  #user_con {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 591px) {
+  #user_con {
+    margin-top: 20%;
+  }
+}
+@media only screen and (max-width: 612px) {
+  #se form#ddos .io {
+    margin-top: 20%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #user_con {
+    margin-top: 20%;
+    width: 100%;
+  }
+
+  .lad {
+    margin-top: 10%;
+    overflow: auto;
+  }
+  .accounts_cont iframe {
+    height: 95%;
+    margin-top: 5%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #se form#ddos .io {
+    width: 100%;
+    margin-top: 14%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-top: 20%;
+    height: auto;
+  }
+  .card #inf {
+    width: 100%;
+  }
+
+  .card h1 {
+    font-size: 6vw;
+  }
+  .card p {
+    font-size: 4vw;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+
+    float: none;
+  }
+  .card #inf {
+    float: none;
+    z-index: 2;
+  }
+}
+/*@media only screen and (max-width:1108px) {
+    .user_cont{
+        margin-top: 8%;
+    }
+    .accounts_cont{
+        margin-top: 8%;
+    }
+    #user_con{
+        margin-top: 18%;
+        height: 78vh;
+    }
+    #user_con img{
+        width: 60vw;
+        max-height: 60vw;
+
+    }
+    .oky input{
+        background-color: transparent;
+        color: #222;
+        margin-left: 33%;
+        
+    }
+}*/

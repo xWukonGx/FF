@@ -1,0 +1,136 @@
+
+*{
+    font-family: Cairo;
+}
+
+body{
+    background-color: #222;
+    border-radius: 25px;
+    color:white;
+    width: 100%;
+   overflow-x: hidden;
+   scrollbar-width: thin;
+   
+   align-items: center;
+    font-family: Cairo;
+    margin: auto;
+}
+.cart{
+    width:40%;
+    height:auto;
+    float: left;
+    border-radius: 25px;
+    margin-left: 5%;
+    margin-bottom:2% ;
+    border:darkorange 1px solid ;
+}
+.cart table{
+   
+    width: 100%;
+    height: inherit;
+}
+
+.add{
+    position: fixed;
+    display: block;
+    margin-bottom:0;
+    border-radius: 50%;
+    padding: 10%;
+    background-color: #222;
+    border:1px solid darkorange;
+    right: 0;
+}
+table td img{
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    height: auto;
+}
+.cart table tr td{
+    
+    width: 50%;
+    
+
+}
+
+.rev{
+    text-align: center;
+    margin: 3% auto;
+    width: 100%;
+    cursor: hand;
+    margin-top:15%;
+    margin-bottom: 15%;
+    height: max-content;
+    font-size: 14px;
+
+}
+
+table td .rev1{
+
+    width: 100%;
+    text-align: left;
+    margin:2% ;
+    
+    cursor: hand;
+
+}
+
+#Active:hover{
+    background-color: darkorange;
+}
+.cart table tr{
+    width: 100%;
+}
+td#ima{
+    width:30%;
+}
+td#info{
+    width: 70%;
+    padding-left: 6%;
+}
+td#des{
+    width:100%;padding-left: 10%;
+    border:white 1px solid;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: darkorange;  
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(68, 68, 68);
+
+  }
+  @media only screen and (max-width:768px){
+    .rev{
+        font-size: 9vw;
+    }
+  }
+@media only screen and (max-width:768px) {
+    .cart{
+        width: 98%;
+        margin-top: 11%;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 0;
+        float: none;
+    }
+    td{
+        font-size: 4vw;
+    }
+    .rev{
+        font-size: 3vw;
+    }
+
+}
