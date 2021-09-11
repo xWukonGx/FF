@@ -48,6 +48,12 @@ while($row = mysqli_fetch_assoc($result) ){
     elseif($row['TYPE'] == "COD"){
         $img = "cod.jpg";
     }
+    elseif($row['TYPE'] == "NETFLIX"){
+        $img = "netflix.png";
+    }
+    elseif($row['TYPE'] == "SPOTIFY"){
+        $img = "spotify.png";
+    }
     
 
 echo '
@@ -55,7 +61,7 @@ echo '
             <table style="font-family:Cairo;">
                 <tr >
                     <td id="#ima"><img src="../imaages/'.$img.'" alt=""></td>
-                    <td style="margin: 4% 9%;" class= "rev1" id="info'.$key.'" onclick="desc('.$key.');" id="info"><b>'.$type.' ACCOUNT</b><br>Level '.$level.'<br>Linked to '.$accto.'<br>Price : '.$price.' DA<br>Owner : '.$owner.'<br>'.$contact.'</td>
+                    <td style="margin: 4% 9%;width: 100%;display: block;" class= "rev1" id="info'.$key.'" onclick="desc('.$key.');" id="info"><b>'.$type.' ACCOUNT</b><br>Level '.$level.'<br>Linked to '.$accto.'<br>Price : '.$price.' DA<br>Owner : '.$owner.'<br>'.$contact.'</td>
                     <center>
                     <td class="rev" id="'.$key.'" onclick="desc('.$key.');"  style="display:none;width: 100%;">'.$desc.'</td>
                     </tr>

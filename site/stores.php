@@ -34,7 +34,7 @@
 
 
 
-    <body>
+    <body onload="checkareas();" >
     <navbar>
             <ul>
                 <li id="exo" style="margin-right: 1.5%; padding:0;"><a href="../site/account.php"><img style="width: 34px;height: auto;border-radius: 50%;max-height: 33px;" src=<?php echo $img_pic;?> alt=""></a></li>
@@ -59,13 +59,27 @@
     
         </navbar>
 
-    <!-- $conn = mysqli_connect("localhost","root","root","fox_fire");
-    $result = mysqli_query($conn,"SELECT * from private_stores ") -->
+                    <div class="intro">
+                    <div id="contenti">
+                            <h2 ><span id="resp"> Welcome To </span><b>Stores</b> Area</h2>
+
+    <p style="
+    
+    overflow-wrap: break-word;
+    margin: 2% auto;
+    font-size: 19px;
+">نحن نوفر لك متجر الكتروني خاص بك لتسهيل وصول العملاء الى حساباتك المعروضة مع خاصية الاعلانات غير المحدودة مع عرض جهات الاتصال الخاصة بك لهم .</p>
+<div id="links">                     
+<a class="fa fa-facebook" href="https://web.facebook.com/mehdi.bf.5283"></a>
+<a class="fa fa-google" href="mailto:pog2py@gmail.com"></a>
+</div>   
+</div>
+                    </div>
     <?php
     $sql = "SELECT * From private_stores ";
     mysqli_set_charset($conn,"utf8");
             $result = mysqli_query($conn,$sql);
-            
+            echo '<br><span id="category">STORES</span>';
     while($row = mysqli_fetch_assoc($result)){
         $title = $row['store_name'];
         $key = $row['KEY'];
@@ -78,6 +92,8 @@
         $puted = $row['puted_accounts'];
         
     echo '
+    
+   
     <div class="card">
             <img src="'.$store_image.'" alt="">
             <div id="inf">
@@ -90,13 +106,13 @@
                 <a class="fa fa-google" href="mailto:'.$email_te.'"></a>
                <a class="fa fa-phone" href="tel:+'.$number.'"></a>
             </div>
-        </div>';
+        </div></div>';
     }
     ?>
-
+<p id="fook">CODED BY WUKONG</p>
         
-        <br>
-        <br>
+        
+        
         <script src="../js/ss.js"></script>
         
     </body>
