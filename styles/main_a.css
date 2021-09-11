@@ -5,6 +5,7 @@
 }
 body {
   background-color: #222;
+  overflow-x: hidden;
 }
 navbar ul {
   list-style-type: none;
@@ -22,6 +23,9 @@ navbar ul {
 navbar ul li {
   display: inline;
   float: left;
+}
+div#ll {
+  margin-top: 10%;
 }
 navbar ul li a {
   color: white;
@@ -484,6 +488,7 @@ img#GA:hover .btn {
 
   text-align: center;
 }
+
 #fook:hover {
   letter-spacing: 2px;
   transition: ease-out 0.4s 0s;
@@ -527,16 +532,95 @@ img#GA:hover .btn {
 #addme {
   display: none;
 }
+.cart {
+  width: 49%;
+  height: auto;
+  float: left;
+  margin: 0.5%;
+  border-radius: 25px;
 
+  border: darkorange 1px solid;
+}
+.cart table {
+  width: 100%;
+  height: inherit;
+}
+table td img {
+  display: block;
+  width: 100%;
+  border-radius: 25px;
+  height: auto;
+}
+.cart table tr td {
+  width: 50%;
+}
+
+.rev {
+  text-align: center;
+  margin: 3% auto;
+  width: 100%;
+  cursor: hand;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  height: max-content;
+  font-size: 14px;
+}
+
+table td .rev1 {
+  width: 100%;
+  text-align: left;
+  margin: 2%;
+
+  cursor: hand;
+}
+
+#Active:hover {
+  background-color: darkorange;
+}
+.cart table tr {
+  width: 100%;
+}
+td#ima {
+  width: 30%;
+}
+td#info {
+  width: 70%;
+  padding-left: 6%;
+}
+td#des {
+  width: 100%;
+  padding-left: 10%;
+  border: white 1px solid;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkorange;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(68, 68, 68);
+}
 .card {
   width: 100%;
   height: 50vh;
   border-radius: 25px;
-  margin-top: 1%;
+
   overflow: hidden;
   float: left;
   border: 1px solid darkorange;
 }
+
 .card img {
   width: auto;
   float: left;
@@ -544,7 +628,7 @@ img#GA:hover .btn {
 }
 .card #inf {
   float: left;
-  width: 40%;
+  width: auto;
   margin-left: 2%;
 }
 .card #inf h1 {
@@ -741,6 +825,7 @@ img#GA:hover .btn {
     margin-top: 20%;
     height: auto;
   }
+
   .card #inf {
     width: 100%;
   }
@@ -766,7 +851,22 @@ img#GA:hover .btn {
   }
   .card #inf {
     float: none;
+    color: white;
     z-index: 2;
+  }
+  .cart {
+    width: 98%;
+    margin-top: 11%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    float: none;
+  }
+  td {
+    font-size: 4vw;
+  }
+  .rev {
+    font-size: 3vw;
   }
 }
 /*@media only screen and (max-width:1108px) {

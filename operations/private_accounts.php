@@ -13,11 +13,10 @@
 <?php
 $conn = mysqli_connect("localhost","root","root","fox_fire");
 mysqli_set_charset($conn,"utf8");
-$diko = $_GET['id'];
-$result1 = $diko+30;
-setcookie("formid",$diko,time()+7200,"/");
-$sql = "SELECT * FROM accounts ORDER BY date DESC LIMIT 30 OFFSET $diko";
-$result = mysqli_query($conn,$sql) or die("erro");
+
+echo $owner;
+$sql = "SELECT * FROM accounts ORDER BY date DESC WHERE Owner=$owner ";
+$result = mysqli_query($conn,$sql);
 echo "<div class='lad' style='overflow-y:auto;'>";
 function getDescription($key){
     $result2 = mysqli_query($conn,"SELECT DESCRIPTIION FROM accounts WHERE KEY=$key");
@@ -33,7 +32,7 @@ while($row = mysqli_fetch_assoc($result) ){
     $accto = $row['ACCTO'];
     $level = $row['LEVEL'];
     $desc = $row['DESCRIPTIION'];
-    $owner = $row['Owner'];
+    $owner_local = $row['Owner'];
     $key = $row['KEY'];
     $contact = $row['contact'];
     
@@ -61,7 +60,7 @@ echo '
             <table style="font-family:Cairo;">
                 <tr >
                     <td id="#ima"><img src="../imaages/'.$img.'" alt=""></td>
-                    <td style="cursor:grab; margin: 4% 9%;width: 100%;display: block;" class= "rev1" id="info'.$key.'" onclick="desc('.$key.');" id="info"><b>'.$type.' ACCOUNT</b><br>Level '.$level.'<br>Linked to '.$accto.'<br>Price : '.$price.' DA<br>Owner : '.$owner.'<br>'.$contact.'</td>
+                    <td style="cursor:grab; margin: 4% 9%;width: 100%;display: block;" class= "rev1" id="info'.$key.'" onclick="desc('.$key.');" id="info"><b>'.$type.' ACCOUNT</b><br>Level '.$level.'<br>Linked to '.$accto.'<br>Price : '.$price.' DA<br>Owner : '.$owner_local.'<br>'.$contact.'</td>
                     <center>
                     <td class="rev" id="'.$key.'" onclick="desc('.$key.');"  style="display:none;width: 100%;">'.$desc.'</td>
                     </tr>

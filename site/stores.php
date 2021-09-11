@@ -84,6 +84,7 @@
         $title = $row['store_name'];
         $key = $row['KEY'];
         $owner = $row['OWNER'];
+        
         $facebook_url = $row['FACEBOOK'];
         $email_te = $row['EMAIL'];
         $number = $row['Phone_number'];
@@ -94,10 +95,10 @@
     echo '
     
    
-    <div class="card">
+    <div style="margin-top:1%;" class="card">
             <img src="'.$store_image.'" alt="">
             <div id="inf">
-                <a href=""><h1>'.$title.'<span style="color:darkorange;"> Store</span></h1></a>
+                <a href="store.php?store='.$owner.'"><h1>'.$title.'<span style="color:darkorange;"> Store</span></h1></a>
                 <p id="own">'.$owner.'</p>
                 <p>Accounts : <span style="color:darkorange;">'.$puted.'</span> </p></p>
             <p>'.$descrip.'</p>
