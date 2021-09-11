@@ -1,6 +1,11 @@
 function closeForm() {
   var se = (document.getElementById("se").style.display = "none");
 }
+function checkareas() {
+  if (screen.width < 422) {
+    document.querySelector("#resp").style.display = "none";
+  }
+}
 function openForm() {
   if (screen.width >= 768) {
     document.getElementById("se").style.display = "block";
