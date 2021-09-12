@@ -38,7 +38,8 @@ function test_input($data) {
 function login(){
     $user = test_input($_POST['user']);
     $pass = test_input($_POST['password']);
-    $repass = test_input($_POST['repassword']);
+    $repass = test_input($_POST['password']);
+    $so = false;
     $conn = mysqli_connect("localhost","root","root","fox_fire");
     $result = mysqli_query($conn,"SELECT * FROM normal_users");
     while($row = mysqli_fetch_assoc($result)){
@@ -48,7 +49,8 @@ function login(){
             $_SESSION['logged'] = "yes";
             setcookie("username",$row['username'],time()+14400,"/");
             
-            header("location:../../site/accounts.php");
+            
+            $so =true;
             break;
 
         }
@@ -58,15 +60,23 @@ function login(){
 
         }
 
-    }echo "<p id='php'>Wrong Username / Password .</p>";
+    }
+    return $so;
+    // header("location:../../site/login.php?id=1");
+    
     
 
 }
 if (isset($_GET['action']) AND $_GET['action'] == 'login'){
 /*start Check*/
-    if(isset($_POST['user']) AND  !empty($_POST['user']) OR  isset($_POST['password']) AND  !empty($_POST['password']) OR isset($_POST['repassword']) AND  !empty($_POST['repassword']))
+    if(isset($_POST['user']) AND  !empty($_POST['user']) OR  isset($_POST['password']) AND  !empty($_POST['password']) OR isset($_POST['password']) AND  !empty($_POST['password']))
     {
-        login();
+        if(login()){
+            header("location:../../site/accounts.php");
+        }
+        else{
+            header("location:../../site/login.php?id=1");
+        }
     }
     else{
         echo "<p id='php'>Null Data : Check Your Inputs.</p>";

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
 if (isset($_COOKIE['username'])){
    
@@ -7,80 +5,95 @@ if (isset($_COOKIE['username'])){
 }
 
 ?>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/session.css" />
+    <title>FOX STORE</title>
+  </head>
+  <body>
+    <nav>
+      <a style="border-right: 1px solid white" href="">FOX <b>STORE</b></a>
 
-<head>
-        <title>
-            Fire Fox
-        </title>
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="shortcut icon" href="imaages/fox.jpg" type="image/x-icon">
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    </head>
-    <body>
-        
-        <navbar>
-        <ul>
-            <li style="margin-right: 1.5%;"><a href=""><b style="color: darkorange;">FOX</b> STORE</a></li>
-            <li style="float: right;"><a href="">حول</a></li>
-        
-        </ul>
+      <a href="site/signup.php">البدء</a>
+      <a href="site/login.php">الدخول</a>
+      <a style="float: right" id="aboutt" href="#about">حول</a>
+      <a
+        style="float: right; border-left: 0.4px solid white"
+        id="contactt"
+        href="#contact"
+        >من نحن</a
+      >
+    </nav>
 
-        </navbar>
-    
-    <center>
-    
-        <div id="main" class="main">
-            <div id="se" class="pop animate">
-                <div class="pop-content">
-                    
-                    <button id="close" onclick="closeForm()">X</button>
-                
-                    <br>
-                    <iframe style="width: 100%;height: 50px;border:none; box-sizing: border-box;display: none;" id="kis"  name="status" ></iframe>
-                
-                    <div class="info">
-                        
-                    <div class="login">
-                        <h1>Log In</h1>
-
-                        <form  name="login" method="POST" action="operations/login/submit.php?action=login">
-                        <input placeholder="Username" required="true" id="login-user" name="user"  type="text" > <br>
-                        <input placeholder="Password" required="true" id="login-password" name="password"   type="password"><br>
-                        <input placeholder="Re-Password" required="true" id="login-repassword" name="repassword"   type="password" ><br>
-                        <input onclick="document.getElementById('kis').style.display='block'" id="submit" type="submit" >
-                        </form>
-                    </div>
-                        
-                    <div class="register">
-                        <h1>Sign Up</h1>
-
-                        <form target="status" name="sign" method="POST" action="operations/reg/submit.php?action=regist">
-                            <input placeholder="Username" required="true" name="user"   type="text" > <br>
-                            <input placeholder="Email" required="true" name="email"   type="email" > <br>
-                            <input placeholder="Password" required="true" name="password"   type="password" >
-                            <br>
-                            <input placeholder="Re-Password" required="true" name="repassword"  type="password" ="Password">
-                            <input onclick="document.getElementById('kis').style.display='block'" id="submit1" type="submit" value="Sign Up">    
-                        </form>
-                    
-                    </div></div>
-
-                   
-                
-                </div>
-            </div>
-            <p id="sk" ><b style="color: darkorange;"> FOX</b> STORE</p>
-            <p id="desc">منصة حصرية لبيع وتبادل حسابات الألعاب والشحن<br>.لجميع الفئات وجميع انواع الالعاب</p>
-            
-            
-            <button onclick="openForm()" id="skss">حساب مجاني</button>
-            <button onclick="openForm()" id="skss">متجر مدفوع</button>
-            
-
+    <div id="about" class="desc">
+      <div class="content">
+        <div class="fox">
+          <h1>متجر فوكس</h1>
+          <p>
+            موقعنا هو موقع يقوم بعرض حسابات لعدة مواقع بهدف بيعها أو بهدف
+            التبادل بها، بشكل مجاني تماما بالطبع يتواجد مميزات اخرى مدفوعة في
+            الموقع كالمتاجر الخاصة التي توفر لك خواص تزيد من فاعلية البيع . كما
+            يمكنك بدء عمل تجاري خاص بك لبيع حسابات بالجملة او الشراء و اعادة
+            البيع نأمل أن نصل الى مستوى توقعاتكم .
+          </p>
+          <a href="">البدء</a>
         </div>
-        <script src="js/ss.js"></script>
+        <img src="imaages/pexels-photo-2764678.jpeg" alt="" />
+      </div>
+    </div>
 
-    </body>
+    <div
+      style="
+        background-image: url('imaages/Renard_roux_full_moon_2048x.jpg');
+        background-position: bottom;
+      "
+      class="desc"
+    >
+      <div id="contact" class="content">
+        <div class="fox">
+          <h1>من نحن ؟</h1>
+          <p>
+            يتم تسيير موقع متجر فوكس عبر أحد شركاء مدير الموقع حيث يعمل على
+            تسيير العمليات اليدوية القليلة كالتحقق من صحة الاعلانات من عدمها
+            بينما يقوم مدير الموقع بتطوير الموقع برمجيا واضافة خواص جديدة
+            للمساعدة في توفير جربة أكثر مرونة في الأستخدام
+          </p>
+          <a href="#cardss">تواصل معنا</a>
+        </div>
+        <img src="imaages/300b211800b1299e8640620dbb783270.jpg" alt="" />
+      </div>
+    </div>
+    <div id="cardss" style="background-image: none" class="desc">
+      <div class="cards">
+        <div class="card">
+          <img src="imaages/sans.png" alt="" />
+          <h3>SANS</h3>
+          <hr />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+            debitis at id iste voluptatibus in temporibus laudantium,
+            cupiditate, veritatis sint, aspernatur illum doloribus tempore
+            explicabo. Non repellat dolorem officiis quaerat.
+          </p>
+          <a href="https://web.facebook.com/abdoou.sdk">CONTACT ME</a>
+        </div>
+        <div class="card">
+          <img src="imaages/wukong.jpg" alt="" />
+          <h3>WUKONG</h3>
+          <hr />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+            debitis at id iste voluptatibus in temporibus laudantium,
+            cupiditate, veritatis sint, aspernatur illum doloribus tempore
+            explicabo. Non repellat dolorem officiis quaerat.
+          </p>
+          <a href="https://web.facebook.com/mehdi.bf.5283/">CONTACT ME</a>
+        </div>
+      </div>
+    </div>
+    <footer>CODED BY WUKONG</footer>
+  </body>
 </html>

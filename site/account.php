@@ -22,11 +22,13 @@
             
             while($row = mysqli_fetch_assoc(mysqli_query($conn,$sql))){
                 $anons = $row['anouncements'];
+                $status = $row['private'];
                 $img_pic = $row['PIC'];
                 break;
             }
             $last = 3-$anons;
-            $dik = "$last/3";
+            
+            $last1 = 999-$anons;
         }
         
     ?>
@@ -60,8 +62,10 @@
         </form></center>
     </div>
         <p id="username"><?php echo $_COOKIE['username'];?></p>
-        <p id="statics">Account : <b>FREE</b></p>
-        <p id="statics">Anouncements : <b id='anons'><?php echo "$dik";?></b></p>
+        <?php if($status == 1){$dik = "$last1";$contpaid = "Private Store";}else{$dik = "$last/3";$contpaid = "FREE";}?>
+            <p id="statics">Account : <b><?php echo $contpaid;?></b></p>
+                    
+            <p id="statics">Anouncements : <b id="anons"><?php echo "$dik";?></b></p>
         <center>
         <a id="logoutt" href="../operations/logout.php">LOGOUT</a>
     </center>

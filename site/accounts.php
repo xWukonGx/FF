@@ -78,10 +78,12 @@ function CloseAn(){
             while($row = mysqli_fetch_assoc(mysqli_query($conn,$sql))){
                 $anons = $row['anouncements'];
                 $img_pic = $row['PIC'];
+                $status = $row['private'];
                 break;
             }
             $last = 3-$anons;
-            $dik = "$last/3";
+            $last1 = 999-$anons;
+            
         }
         
     ?>
@@ -92,6 +94,7 @@ function CloseAn(){
                 <li><a onclick="frame()" href="stores.php" >المتاجر الخاصة</a></li>
                 <li><a onclick="frame()" href="accounts.php">المتجر العام</a></li>
                 <li  style="float: right;"><?php
+
                     if ($last >= 3){
                             
                     }
@@ -116,17 +119,24 @@ function CloseAn(){
     </center>
             
             <p id="username"><?php echo $_COOKIE['username'];?></p>
-            <p id="statics">Account : <b>FREE</b></p>
-            <p id="statics">Anouncements : <b id='anons'><?php echo "$dik";?></b></p>
+            <?php if($status == 1){$dik = "$last1";$contpaid = "Private Store";}else{$dik = "$last/3";$contpaid = "FREE";}?>
+            <p id="statics">Account : <b><?php echo $contpaid;?></b></p>
+                    
+            <p id="statics">Anouncements : <b id="anons"><?php echo "$dik";?></b></p>
 
             <center><br>
                 <?php
+                if ($status == 1){
+                    echo '<button id="addmas" onclick="AddAn()" style="padding:1% 12%;color:white;border:tomato 1px solid;border-radius:25px;background-color: #222;">Add</button>';
+
+                }
+                else{
                 if ($last >= 3){
                         
                 }
                 else{
                     echo '<button id="addmas" onclick="AddAn()" style="padding:1% 12%;color:white;border:tomato 1px solid;border-radius:25px;background-color: #222;">Add</button>';
-
+                }
                 }
                 ?>
             </center>

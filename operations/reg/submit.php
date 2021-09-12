@@ -49,7 +49,7 @@ function checkPass(){
     }
 }
 function checkRePass(){
-    $repass = test_input($_POST['repassword']);
+    $repass = test_input($_POST['password']);
     if ($repass != null){
         return true;
     }
@@ -68,7 +68,7 @@ function checkEmail(){
 }
 function checkPasswords(){
     $pass = test_input($_POST['password']);
-    $repass = test_input($_POST['repassword']);
+    $repass = test_input($_POST['password']);
     if($pass != $repass){
         return false;
     }
@@ -170,12 +170,12 @@ if (isset($io) AND $io == 'regist'){
                     if(signup()){
                         mkdir("../../site/user_photo/".$_POST['user']);
                         
-                        echo "<p id='php1'>Account Registred Please Verify Email .</p>";
+                        header("location:../../site/login.php?ids=1");
 
                     }
                 }
                 else{
-                    echo "<p id='php'>Same Data in the Database .</p>";
+                    header("location:../../site/signup.php?id=1");
                 }
 
 

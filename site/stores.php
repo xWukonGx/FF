@@ -41,16 +41,7 @@
                 <li id ="sexo" style="margin-right: 1.5%;"><a href="../index.php"><b style="color: darkorange;">FOX</b> STORE</a></li>
                 <li><a onclick="frame()" href="stores.php" >المتاجر الخاصة</a></li>
                 <li><a onclick="frame()" href="accounts.php">المتجر العام</a></li>
-                <li  style="float: right;"><?php
-                    if ($last >= 3){
-                            
-                    }
-                    else{
-                        echo '<a onclick="AddAn()"><img  style="width: 34px;
-                            max-height: 33px;padding: 4px;" id="addme" src="../imaages/addme.png"  ></a>';
-    
-                    }
-                    ?></li>
+         
                 <li id="logout" style="float: right;"><a href="../operations/logout.php"><img style="width: 34px;
                     max-height: 33px;padding: 4px;" src="../imaages/logout.png" onmouseleave="this.src='../imaages/logout.png'" onmouseover="this.src='../imaages/logouthover.png';" alt=""></a></li>
 
@@ -69,6 +60,8 @@
     margin: 2% auto;
     font-size: 19px;
 ">نحن نوفر لك متجر الكتروني خاص بك لتسهيل وصول العملاء الى حساباتك المعروضة مع خاصية الاعلانات غير المحدودة مع عرض جهات الاتصال الخاصة بك لهم .</p>
+
+
 <div id="links">                     
 <a class="fa fa-facebook" href="https://web.facebook.com/mehdi.bf.5283"></a>
 <a class="fa fa-google" href="mailto:pog2py@gmail.com"></a>
